@@ -41,8 +41,8 @@
                                             <th>Category</th>
                                             <th>Number of Media</th>
                                             <th>Description</th>
-                                            <th></th>
-                                            <th></th>
+                                            <th>Action 1</th>
+                                            <th>Action 2</th>
                                         </tr>
                                     </thead>
 
