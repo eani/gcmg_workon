@@ -23,29 +23,24 @@
     <div id="wrapper">
         @guest
             <nav class="navbar navbar-expand-md navbar-light navbar-laravel">
-                <div class="container">
-                    <a class="navbar-brand" href="{{ url('/') }}">
+                
+                <div class="collapse navbar-collapse" >
+                    <!-- Left Side Of Navbar -->
+                    <a class="navbar-brand " href="{{ url('/') }}">
                         {{ config('app.name', 'Laravel') }}
                     </a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
 
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <!-- Left Side Of Navbar -->
-                        <ul class="navbar-nav mr-auto">
-
-                        </ul>
-
-                        <!-- Right Side Of Navbar -->
-                        <ul class="navbar-nav ml-auto">
-                            <!-- Authentication Links -->
-                            @guest
-                                <li><a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a></li>
-                                <li><a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a></li>
-                            @endguest
-                        </ul>
-                    </div>
+                    <!-- Right Side Of Navbar -->
+                    <ul class="navbar-nav ml-auto">
+                        <!-- Authentication Links -->
+                        
+                        <li><a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a></li>
+                        <li><a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a></li>
+                        
+                    </ul>
                 </div>
             </nav> 
 
@@ -195,12 +190,12 @@
                                 <li class="dropdown notification-list">
                                     <a class="nav-link dropdown-toggle nav-user" data-toggle="dropdown" href="#" role="button"
                                        aria-haspopup="false" aria-expanded="false">
-                                        <img src="{{asset('admin_assets/assets/images/users/avatar-1.jpg')}}" alt="user" class="rounded-circle"> <span class="ml-1">{{-- {{ Auth::user()->name }} --}} <i class="mdi mdi-chevron-down"></i> </span>
+                                        <img src="{{asset('admin_assets/assets/images/users/avatar-1.jpg')}}" alt="user" class="rounded-circle"> <span class="ml-1">{{ Auth::user()->name }} <i class="mdi mdi-chevron-down"></i> </span>
                                     </a>
                                     <div class="dropdown-menu dropdown-menu-right dropdown-menu-animated profile-dropdown ">
                                         <!-- item-->
                                         <div class="dropdown-item noti-title">
-                                            <h6 class="text-overflow m-0">Welcome ! {{-- {{ Auth::user()->name }} --}} </h6>
+                                            <h6 class="text-overflow m-0">Welcome ! {{ Auth::user()->name }} </h6>
                                         </div>
 
                                         <!-- item-->

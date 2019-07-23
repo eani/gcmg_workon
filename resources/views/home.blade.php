@@ -1,5 +1,9 @@
 @extends('layouts.app')
 
+@section('title')
+    GCMG - Admin Resource Managemnet System
+@endsection
+
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
@@ -21,3 +25,5 @@
     </div>
 </div>
 @endsection
+
+
