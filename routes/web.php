@@ -16,11 +16,10 @@ Route::get('/',
     return view('welcome2');
 });
 
-// Route::get('/admin', 
-// 	function () {
-//     return view('admin');
-// }
-// );
+Route::get('/dashboard', 
+	function () {
+    return view('auth/login');
+});
 
 Route::get('/admin', 'CategoryController@viewdash')->name('admin');    
 
