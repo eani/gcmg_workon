@@ -22,7 +22,7 @@ Route::get('/',
 // }
 // );
 
-Route::get('/admin', 'CategoryController@viewdash')->name('admin');         //
+Route::get('/admin', 'CategoryController@viewdash')->name('admin');    
 
 
 ///////////////////////////////////// VIEW ALL LINK ROUTE //////////////////////////////////////////////
@@ -100,6 +100,8 @@ Route::resource('categories', CategoryController::class);                       
 
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/home', 'CategoryController@viewdash')->name('home');         
+
 
 
 Auth::routes();

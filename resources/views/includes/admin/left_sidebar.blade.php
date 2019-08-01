@@ -5,7 +5,7 @@
 
         <!-- LOGO -->
         <div class="topbar-left">
-            <a href="/admin" class="logo">
+            <a href="/home" class="logo">
                 <span>
                     <img src="{{asset('admin_assets/assets/images/logo.jpg')}}" alt="" height="200">
                 </span>
@@ -19,7 +19,7 @@
             <div class="user-img">
                 <img src="{{asset('admin_assets/assets/images/users/avatar-1.jpg')}}" alt="user-img" title="Mat Helme" class="rounded-circle img-fluid">
             </div>
-            <h5><a href="#">Maxine Kennedy</a> </h5>
+            <h5><a href="#">Hi! {{ Auth::user()->name }}</a> </h5>
             <p class="text-muted">Admin</p>
         </div>
 
@@ -31,7 +31,7 @@
                 <!--<li class="menu-title">Navigation</li>-->
 
                 <li>
-                    <a href="/admin">
+                    <a href="/home">
                         <i class="fi-air-play"></i><span class="badge badge-danger badge-pill pull-right"></span> <span> Dashboard </span>
                     </a>
                 </li>

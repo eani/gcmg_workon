@@ -39,7 +39,7 @@ class CategoryController extends Controller
         // dd($categories->toArray());
         // dd($category_typesVideo->toArray());
 
-        return view('admin', compact('categories','category_typesApp','category_typesAudio','category_typesbooks', 'category_typesVideo','catlimit'));
+        return view('home', compact('categories','category_typesApp','category_typesAudio','category_typesbooks', 'category_typesVideo','catlimit'));
     }
 
     /**

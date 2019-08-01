@@ -148,7 +148,7 @@
                 </div>
                 <!-- end row -->
 
-                <div class="row">
+                {{-- <div class="row">
                     <div class="col-lg-6">
                         <div class="card-box">
                             <h4 class="header-title">Order Overview</h4>
@@ -169,7 +169,7 @@
 
                         </div>
                     </div>
-                </div>
+                </div> --}}
                 <!-- end row -->
 
 
@@ -184,7 +184,7 @@
 
 @section('scripts')
     <script src="{{asset('admin_assets/assets/pages/jquery.dashboard.init.js')}}"></script>
-                   <!-- Dashboard Init -->
+    <!-- Dashboard Init -->
     <script type="text/javascript">
         
         /**

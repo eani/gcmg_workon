@@ -85,46 +85,46 @@
 
                                         <div class="slimscroll" style="max-height: 230px;">
                                             <!-- item-->
-                                            <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                            {{-- <a href="javascript:void(0);" class="dropdown-item notify-item">
                                                 <div class="notify-icon bg-success"><i class="mdi mdi-comment-account-outline"></i></div>
                                                 <p class="notify-details">Caleb Flakelar commented on Admin<small class="text-muted">1 min ago</small></p>
-                                            </a>
+                                            </a> --}}
 
                                             <!-- item-->
-                                            <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                           {{--  <a href="javascript:void(0);" class="dropdown-item notify-item">
                                                 <div class="notify-icon bg-info"><i class="mdi mdi-account-plus"></i></div>
                                                 <p class="notify-details">New user registered.<small class="text-muted">5 hours ago</small></p>
-                                            </a>
+                                            </a> --}}
 
                                             <!-- item-->
-                                            <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                           {{--  <a href="javascript:void(0);" class="dropdown-item notify-item">
                                                 <div class="notify-icon bg-danger"><i class="mdi mdi-heart"></i></div>
                                                 <p class="notify-details">Carlos Crouch liked <b>Admin</b><small class="text-muted">3 days ago</small></p>
-                                            </a>
+                                            </a> --}}
 
                                             <!-- item-->
-                                            <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                           {{--  <a href="javascript:void(0);" class="dropdown-item notify-item">
                                                 <div class="notify-icon bg-warning"><i class="mdi mdi-comment-account-outline"></i></div>
                                                 <p class="notify-details">Caleb Flakelar commented on Admin<small class="text-muted">4 days ago</small></p>
-                                            </a>
+                                            </a> --}}
 
                                             <!-- item-->
-                                            <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                           {{--  <a href="javascript:void(0);" class="dropdown-item notify-item">
                                                 <div class="notify-icon bg-purple"><i class="mdi mdi-account-plus"></i></div>
                                                 <p class="notify-details">New user registered.<small class="text-muted">7 days ago</small></p>
-                                            </a>
+                                            </a> --}}
 
                                             <!-- item-->
-                                            <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                            {{-- <a href="javascript:void(0);" class="dropdown-item notify-item">
                                                 <div class="notify-icon bg-custom"><i class="mdi mdi-heart"></i></div>
                                                 <p class="notify-details">Carlos Crouch liked <b>Admin</b><small class="text-muted">13 days ago</small></p>
-                                            </a>
+                                            </a> --}}
                                         </div>
 
                                         <!-- All-->
-                                        <a href="javascript:void(0);" class="dropdown-item text-center text-primary notify-item notify-all">
+                                        {{-- <a href="javascript:void(0);" class="dropdown-item text-center text-primary notify-item notify-all">
                                             View all <i class="fi-arrow-right"></i>
-                                        </a>
+                                        </a> --}}
 
                                     </div>
                                 </li>
@@ -144,45 +144,45 @@
 
                                         <div class="slimscroll" style="max-height: 230px;">
                                             <!-- item-->
-                                            <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                            {{-- <a href="javascript:void(0);" class="dropdown-item notify-item">
                                                 <div class="notify-icon"><img src="{{asset('admin_assets/assets/images/users/avatar-2.jpg')}}" class="img-fluid rounded-circle" alt="" /> </div>
                                                 <p class="notify-details">Cristina Pride</p>
                                                 <p class="text-muted font-13 mb-0 user-msg">Hi, How are you? What about our next meeting</p>
                                             </a>
-
+ --}}
                                             <!-- item-->
-                                            <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                           {{--  <a href="javascript:void(0);" class="dropdown-item notify-item">
                                                 <div class="notify-icon"><img src="{{asset('admin_assets/assets/images/users/avatar-3.jpg')}}" class="img-fluid rounded-circle" alt="" /> </div>
                                                 <p class="notify-details">Sam Garret</p>
                                                 <p class="text-muted font-13 mb-0 user-msg">Yeah everything is fine</p>
-                                            </a>
+                                            </a> --}}
 
                                             <!-- item-->
-                                            <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                           {{--  <a href="javascript:void(0);" class="dropdown-item notify-item">
                                                 <div class="notify-icon"><img src="{{asset('admin_assets/assets/images/users/avatar-4.jpg')}}" class="img-fluid rounded-circle" alt="" /> </div>
                                                 <p class="notify-details">Karen Robinson</p>
                                                 <p class="text-muted font-13 mb-0 user-msg">Wow that's great</p>
-                                            </a>
+                                            </a> --}}
 
                                             <!-- item-->
-                                            <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                            {{-- <a href="javascript:void(0);" class="dropdown-item notify-item">
                                                 <div class="notify-icon"><img src="{{asset('admin_assets/assets/images/users/avatar-5.jpg')}}" class="img-fluid rounded-circle" alt="" /> </div>
                                                 <p class="notify-details">Sherry Marshall</p>
                                                 <p class="text-muted font-13 mb-0 user-msg">Hi, How are you? What about our next meeting</p>
-                                            </a>
+                                            </a> --}}
 
                                             <!-- item-->
-                                            <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                            {{-- <a href="javascript:void(0);" class="dropdown-item notify-item">
                                                 <div class="notify-icon"><img src="{{asset('admin_assets/assets/images/users/avatar-6.jpg')}}" class="img-fluid rounded-circle" alt="" /> </div>
                                                 <p class="notify-details">Shawn Millard</p>
                                                 <p class="text-muted font-13 mb-0 user-msg">Yeah everything is fine</p>
-                                            </a>
+                                            </a> --}}
                                         </div>
 
                                         <!-- All-->
-                                        <a href="javascript:void(0);" class="dropdown-item text-center text-primary notify-item notify-all">
+                                        {{-- <a href="javascript:void(0);" class="dropdown-item text-center text-primary notify-item notify-all">
                                             View all <i class="fi-arrow-right"></i>
-                                        </a>
+                                        </a> --}}
 
                                     </div>
                                 </li>
@@ -199,25 +199,9 @@
                                         </div>
 
                                         <!-- item-->
-                                        <a href="javascript:void(0);" class="dropdown-item notify-item">
+{{--                                         <a href="javascript:void(0);" class="dropdown-item notify-item">
                                             <i class="fi-head"></i> <span>My Account</span>
-                                        </a>
-
-                                        <!-- item-->
-                                        <a href="javascript:void(0);" class="dropdown-item notify-item">
-                                            <i class="fi-cog"></i> <span>Settings</span>
-                                        </a>
-
-                                        <!-- item-->
-                                        <a href="javascript:void(0);" class="dropdown-item notify-item">
-                                            <i class="fi-help"></i> <span>Support</span>
-                                        </a>
-
-                                        <!-- item-->
-                                        <a href="javascript:void(0);" class="dropdown-item notify-item">
-                                            <i class="fi-lock"></i> <span>Lock Screen</span>
-                                        </a>
-
+                                        </a> --}}
                                                                 
                                         <a class="fi-power dropdown-item notify-item" href="{{ route('logout') }}"
                                            onclick="event.preventDefault();
