@@ -70,7 +70,6 @@ class VideoController extends Controller
      */
     public function store(Request $request)
     {
-        
         //Here we Validate the colums we want with regards to the Database Colums
         $this->validate($request, [
             'name'=>'required',
@@ -81,7 +80,7 @@ class VideoController extends Controller
         $params = $request->all(); 
 
         try {
-
+            // dd($params);
             //Insert the Acquired Values into the Video Database
             $video = Video::create($params); 
             $videosmedia = VideosMedia::where('code', $params['code'])->update(["video_id"=>$video->id]);

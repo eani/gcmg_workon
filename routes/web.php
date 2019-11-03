@@ -11,10 +11,14 @@
 |
 */
 
+
 Route::get('/', 
 	function () {
     return view('welcome2');
 });
+
+//Protected Routes
+Route::group(['middleware' => ['auth']], function () {
 
 Route::get('/dashboard', 
 	function () {
@@ -22,6 +26,9 @@ Route::get('/dashboard',
 });
 
 Route::get('/admin', 'CategoryController@viewdash')->name('admin');    
+
+});
+
 
 
 ///////////////////////////////////// VIEW ALL LINK ROUTE //////////////////////////////////////////////
@@ -113,3 +120,5 @@ Route::get('/uploads/book/{book}', function(){})->name('book_file');												
 Route::get('/uploads/video/{video}', function(){})->name('video_file');																///
 																																	///
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
