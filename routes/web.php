@@ -20,12 +20,13 @@ Route::get('/',
 //Protected Routes
 Route::group(['middleware' => ['auth']], function () {
 
-Route::get('/dashboard', 
-	function () {
-    return view('auth/login');
-});
+	Route::get('/dashboard', 
+		function () {
+	    return view('auth/login');
+	});
 
-Route::get('/admin', 'CategoryController@viewdash')->name('admin');    
+	Route::get('/admin', 'CategoryController@viewdash')->name('admin');
+
 
 });
 

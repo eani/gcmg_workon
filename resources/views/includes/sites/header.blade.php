@@ -73,7 +73,7 @@
                      
                     <!-- Social Icons -->
                     <li><a href="https://www.facebook.com/ghanagcm/"><span class="ion-social-facebook"></span></a></li> 
-                    <li><a href="https://twitter.com/Gcm_Ghana"><span class="ion-social-twitter"></span></a></li> 
+                    <li><a href="https://twitter.com/GcmGhana"><span class="ion-social-twitter"></span></a></li> 
                     <!-- End Social Icons -->
                     
                 </ul>   
