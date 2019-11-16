@@ -13,4 +13,9 @@ class AudiosMedia extends Model
     	'priority',
     	'audio_id',
     ];
+
+    public function downloads()
+    {
+    	return $this->hasMany('App\Download','file_id')->where('file_type','audio');
+    }
 }

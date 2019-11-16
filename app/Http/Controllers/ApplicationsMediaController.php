@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\ApplicationsMedia;
+use App\Download;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\File;
 
@@ -16,6 +17,32 @@ class ApplicationsMediaController extends Controller
     public function index()
     {
         //
+    }
+
+    public function download($file_type,$file_id,$file,$file_name)
+    {
+        //
+        Download::create([
+            "file_type"=> $file_type,
+            "file_id"=> $file_id,
+            "file_name"=> $file_name,
+
+        ]);
+        
+
+        if ($file_type == 'application'){
+
+            return redirect()->route('application_file', ['application'=>$file]);
+
+        }
+
+        if ($file_type == 'audio'){
+
+            return redirect()->route('audio_file', ['audiomedia'=>$file]);
+
+        }
+        
+
     }
 
     /**

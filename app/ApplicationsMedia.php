@@ -14,4 +14,9 @@ class ApplicationsMedia extends Model
     	'application_id',
     ];
 
+    public function downloads()
+    {
+    	return $this->hasMany('App\Download','file_id')->where('file_type','application');
+    }
+
 }

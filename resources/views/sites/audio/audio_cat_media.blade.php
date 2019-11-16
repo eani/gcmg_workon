@@ -75,7 +75,7 @@
                             
                             @foreach($media->audiosmedia as $audiomedia )
                                 <div class="col-md-3 mb30">
-                                    <a href="{{route('audio_file', ['audiomedia'=>$audiomedia->file])}}" download class="a-box box-hover">
+                                    <a href="{{route('media-downloads', ['file_type'=>'audio','file_id'=>$audiomedia->id,'file'=>$audiomedia->file,'file_name'=>$audiomedia->original_file])}}" download class="a-box box-hover">
                                         <div class="box bg-white"> 
                                             <i class="icon-download size-4x highlight"></i>                                        
                                             <div >

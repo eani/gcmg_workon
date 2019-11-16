@@ -81,11 +81,12 @@
                                     </p>    
                                     <div class="row">
                                         @foreach($application->applicationsmedia as $media)
-                                            <div class="col-xl-1 ">
+                                            <div class="col-xl-2 ">
                                                 <div class="card-box widget-chart-two">
                                                     <img src="{{route('application.thumb')}}" style="width: 120px">
                                                     <p class="text-purple m-b-0 font-14">
-                                                    {{$media->original_file}}
+                                                    {{$media->original_file}} <br>
+                                                    ({{ $media->downloads->count() }} Downloads)
                                                     </p>
                                                     <form action="{{route('applications-media.destroy',['applications_aedium'=>$media->id])}}"
                                                       method="POST" class="form-horizontal"

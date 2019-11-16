@@ -20,16 +20,12 @@ Route::get('/',
 //Protected Routes
 Route::group(['middleware' => ['auth']], function () {
 
-	Route::get('/dashboard', 
-		function () {
-	    return view('auth/login');
-	});
+	// Route::get('/dashboard', 
+	// 	function () {
+	//     return view('auth/login');
+	// });
 
 	Route::get('/admin', 'CategoryController@viewdash')->name('admin');
-
-
-});
-
 
 
 ///////////////////////////////////// VIEW ALL LINK ROUTE //////////////////////////////////////////////
@@ -55,12 +51,23 @@ Route::get('/admin_assets/assets/images/video.jpg', function(){})->name('video.t
 
    
 
+
+Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/home', 'CategoryController@viewdash')->name('home');         
+
+});
+
+
+
 ///////////////////////////////////////// Application Controller Route /////////////////////////////////////////////////////////////////
 																																	 ///
 Route::resource('applications', ApplicationController::class);                                                                       ///
 Route::get('/applications/category/{category}', 'ApplicationController@selectCategoryList')->name('selectCategoryList');             ///
 Route::get('/applications/category/{category}/media/{media}', 'ApplicationController@getCategoryMedia')->name('getCategoryMedia');   ///
-Route::resource('applications-media', ApplicationsMediaController::class);                                                           ///
+Route::resource('applications-media', ApplicationsMediaController::class);        
+Route::get('/media-downloads/{file_type}/{file_id}/{file}/{original_file}', 'ApplicationsMediaController@download')->name('media-downloads');             ///
+
+                                                   ///
 																																	 ///
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -104,10 +111,6 @@ Route::resource('videos-media', VideosMediaController::class);         									
 Route::resource('categories', CategoryController::class);                                                                            ///
 																																	 ///
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-
-Route::get('/home', 'HomeController@index')->name('home');
-Route::get('/home', 'CategoryController@viewdash')->name('home');         
 
 
 

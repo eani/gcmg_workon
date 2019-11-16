@@ -75,7 +75,7 @@
                             
                             @foreach($media->applicationsmedia as $application )
                                 <div class="col-md-3 mb30">
-                                    <a href="{{route('application_file', ['application'=>$application->file])}}" download class="a-box box-hover">
+                                    <a href="{{route('media-downloads', ['file_type'=>'application','file_id'=>$application->id,'file'=>$application->file,'file_name'=>$application->original_file])}}" download class="a-box box-hover">
                                         <div class="box bg-white"> 
                                             <i class="icon-download size-4x highlight"></i>                                        
                                             <div >
