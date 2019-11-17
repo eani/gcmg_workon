@@ -17,45 +17,58 @@ Route::get('/',
     return view('welcome2');
 });
 
+
+
 //Protected Routes
-Route::group(['middleware' => ['auth']], function () {
+Route::group(['middleware' => ['auth']], 
+	function () {
 
-	// Route::get('/dashboard', 
-	// 	function () {
-	//     return view('auth/login');
-	// });
+		// Route::get('/dashboard', 
+		// 	function () {
+		//     return view('auth/login');
+		// });
 
-	Route::get('/admin', 'CategoryController@viewdash')->name('admin');
-
-
-///////////////////////////////////// VIEW ALL LINK ROUTE //////////////////////////////////////////////
-                                                                                                      //
-Route::get('/applications/view-all', 'ApplicationController@viewAll')->name('applications.viewall');  //
-Route::get('/audio/view-all', 'AudioController@viewAll')->name('audio.viewall');                      //
-Route::get('/books/view-all', 'BookController@viewAll')->name('books.viewall');                       //
-Route::get('/videos/view-all', 'VideoController@viewAll')->name('videos.viewall');                    //
-Route::get('/categories/view-all', 'CategoryController@viewAll')->name('categories.viewall');         //
-                                                                                                      //
-////////////////////////////////////////////////////////////////////////////////////////////////////////
+		Route::get('/admin', 'CategoryController@viewdash')->name('admin');
 
 
-
-////////////////////////////////////////Thumbnail Link////////////////////////////////////////////////////
-																										//
-Route::get('/admin_assets/assets/images/application.png', function(){})->name('application.thumb');     //
-Route::get('/admin_assets/assets/images/audio.jpg', function(){})->name('audio.thumb');                 //
-Route::get('/admin_assets/assets/images/book.svg', function(){})->name('book.thumb');                   //
-Route::get('/admin_assets/assets/images/video.jpg', function(){})->name('video.thumb');                 //
-                        																				//
-//////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-   
+		///////////////////////////////////// VIEW ALL LINK ROUTE //////////////////////////////////////////////
+		                                                                                                      //
+		Route::get('/applications/view-all', 'ApplicationController@viewAll')->name('applications.viewall');  //
+		Route::get('/audio/view-all', 'AudioController@viewAll')->name('audio.viewall');                      //
+		Route::get('/books/view-all', 'BookController@viewAll')->name('books.viewall');                       //
+		Route::get('/videos/view-all', 'VideoController@viewAll')->name('videos.viewall');                    //
+		Route::get('/categories/view-all', 'CategoryController@viewAll')->name('categories.viewall');         //
+		                                                                                                      //
+		////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
-Route::get('/home', 'HomeController@index')->name('home');
-Route::get('/home', 'CategoryController@viewdash')->name('home');         
 
-});
+		////////////////////////////////////////Thumbnail Link////////////////////////////////////////////////////
+																												//
+		Route::get('/admin_assets/assets/images/application.png', function(){})->name('application.thumb');     //
+		Route::get('/admin_assets/assets/images/audio.jpg', function(){})->name('audio.thumb');                 //
+		Route::get('/admin_assets/assets/images/book.svg', function(){})->name('book.thumb');                   //
+		Route::get('/admin_assets/assets/images/video.jpg', function(){})->name('video.thumb');                 //
+		                        																				//
+		//////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+		Route::get('/home', 'HomeController@index')->name('home');
+		Route::get('/home', 'CategoryController@viewdash')->name('home');         
+
+	}
+);
+
+
+
+
+///////////////////////////////////////// Downloads Controller Route ///////////////////////////////////////////////////////////////////
+																																	 ///
+Route::resource('downloads', DownloadController::class);                                                                          ///
+Route::get('/media-downloads/{file_type}/{file_id}/{file}/{original_file}', 'DownloadController@store')->name('media-downloads');    ///
+                                                                                                                                     ///
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 
 
 
@@ -64,10 +77,8 @@ Route::get('/home', 'CategoryController@viewdash')->name('home');
 Route::resource('applications', ApplicationController::class);                                                                       ///
 Route::get('/applications/category/{category}', 'ApplicationController@selectCategoryList')->name('selectCategoryList');             ///
 Route::get('/applications/category/{category}/media/{media}', 'ApplicationController@getCategoryMedia')->name('getCategoryMedia');   ///
-Route::resource('applications-media', ApplicationsMediaController::class);        
-Route::get('/media-downloads/{file_type}/{file_id}/{file}/{original_file}', 'ApplicationsMediaController@download')->name('media-downloads');             ///
-
-                                                   ///
+Route::resource('applications-media', ApplicationsMediaController::class);                                                           ///
+                                                                                                                                     ///
 																																	 ///
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 

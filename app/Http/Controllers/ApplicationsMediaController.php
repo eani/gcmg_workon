@@ -19,31 +19,7 @@ class ApplicationsMediaController extends Controller
         //
     }
 
-    public function download($file_type,$file_id,$file,$file_name)
-    {
-        //
-        Download::create([
-            "file_type"=> $file_type,
-            "file_id"=> $file_id,
-            "file_name"=> $file_name,
 
-        ]);
-        
-
-        if ($file_type == 'application'){
-
-            return redirect()->route('application_file', ['application'=>$file]);
-
-        }
-
-        if ($file_type == 'audio'){
-
-            return redirect()->route('audio_file', ['audiomedia'=>$file]);
-
-        }
-        
-
-    }
 
     /**
      * Show the form for creating a new resource.

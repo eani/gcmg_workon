@@ -84,11 +84,12 @@
                                      </p>
                                      <div class="row">
                                          @foreach($book->booksmedia as $media)
-                                             <div class="col-xl-1 ">
+                                             <div class="col-xl-2 ">
                                                  <div class="card-box widget-chart-two">
                                                      <img src="{{route('book.thumb')}}" style="width: 100px">
                                                      <p class="text-purple m-b-0 font-14">
-                                                     {{$media->original_file}}
+                                                     {{$media->original_file}}<br>
+                                                    ({{ $media->downloads->count() }} Downloads)    
                                                      </p>
                                                      <form action="{{route('books-media.destroy',['books_bedium'=>$media->id])}}"
                                                        method="POST" class="form-horizontal"

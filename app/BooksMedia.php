@@ -13,4 +13,9 @@ class BooksMedia extends Model
     	'priority',
     	'book_id',	
     ];
+
+    public function downloads()
+    {
+    	return $this->hasMany('App\Download','file_id')->where('file_type','book');
+    }
 }

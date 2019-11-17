@@ -141,17 +141,24 @@ WELCOME TO GCMG - DIGITAL MINISTRY
                         <div class="col-md-12">
                             <ul class="connected-icons social-icons light">
                                 
-                                <!-- <li class="connected-icon">
+                               <!--  <li class="connected-icon">
                                     <a target="email" href="nationaloffice@gcmgh.org">
                                         <i class="ion-email-unread"></i> 
                                     </a>
-                                </li> -->
-                                
+                                </li>  -->
+
                                 <li class="connected-icon">
+                                    <a target="_blank" href="https://www.gcmghana.org/">
+                                        <i class="ion-earth"></i> 
+                                    </a>
+                                </li> 
+                                
+                                
+                               <!--  <li class="connected-icon">
                                     <a target="_blank" href="#">
                                         <i class="ion-social-youtube"></i> 
                                     </a>
-                                </li>
+                                </li> -->
 
                                 <li class="connected-icon">
                                     <a target="_blank" href="https://www.facebook.com/ghanagcm/">
@@ -160,16 +167,16 @@ WELCOME TO GCMG - DIGITAL MINISTRY
                                 </li>
 
                                 <li class="connected-icon">
-                                    <a target="_blank" href="https://twitter.com/Gcm_Ghana">
+                                    <a target="_blank" href="https://twitter.com/GcmGhana">
                                         <i class="ion-social-twitter"></i>  
                                     </a>
                                 </li>
 
-                                <li class="connected-icon">
+                                <!-- <li class="connected-icon">
                                     <a target="_blank" href="#">
                                         <i class="ion-social-instagram"></i> 
                                     </a>
-                                </li>  
+                                </li>  --> 
 
                                                                                                
                             </ul>        

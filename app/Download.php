@@ -12,4 +12,5 @@ class Download extends Model
     	'file_type',
     	'file_name',
     ];
+
 }

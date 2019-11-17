@@ -75,7 +75,7 @@
                             
                             @foreach($media->videosmedia as $videosmedia)
                                 <div class="col-md-3 mb30">
-                                    <a href="{{route('video_file', ['videosmedia'=>$videosmedia->file])}}" download class="a-box box-hover">
+                                    <a href="{{route('media-downloads', ['file_type'=>'video','file_id'=>$videosmedia->id,'file'=>$videosmedia->file,'file_name'=>$videosmedia->original_file])}}" download class="a-box box-hover">
                                         <div class="box bg-white"> 
                                             <i class="icon-download size-4x highlight"></i>                                        
                                             <div >

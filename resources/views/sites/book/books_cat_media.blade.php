@@ -75,7 +75,7 @@
                             
                             @foreach($media->booksmedia as $booksmedia )
                                 <div class="col-md-3 mb30">
-                                    <a href="{{route('book_file', ['booksmedia'=>$booksmedia->file])}}" download class="a-box box-hover">
+                                    <a href="{{route('media-downloads', ['file_type'=>'book','file_id'=>$booksmedia->id,'file'=>$booksmedia->file,'file_name'=>$booksmedia->original_file])}}" download class="a-box box-hover">
                                         <div class="box bg-white"> 
                                             <i class="icon-download size-4x highlight"></i>                                        
                                             <div >

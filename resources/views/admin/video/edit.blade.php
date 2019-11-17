@@ -85,11 +85,12 @@
                                      </p>
                                      <div class="row">
                                          @foreach($video->videosmedia as $media)
-                                             <div class="col-xl-1 ">
+                                             <div class="col-xl-2 ">
                                                  <div class="card-box widget-chart-two">
                                                      <img src="{{route('video.thumb')}}" style="width: 100px">
                                                      <p class="text-purple m-b-0 font-14">
-                                                     {{$media->original_file}}
+                                                     {{$media->original_file}}<br>
+                                                    ({{ $media->downloads->count() }} Downloads)
                                                      </p>
                                                      <form action="{{route('videos-media.destroy',['videos_vedium'=>$media->id])}}"
                                                        method="POST" class="form-horizontal"
