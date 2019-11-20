@@ -29,7 +29,6 @@ Route::group(['middleware' => ['auth']],
 		// });
 
 		Route::get('/admin', 'CategoryController@viewdash')->name('admin');
-		// Route::get('/admin', 'DownloadController@viewdash')->name('admin');
 
 
 		///////////////////////////////////// VIEW ALL LINK ROUTE //////////////////////////////////////////////
@@ -39,6 +38,7 @@ Route::group(['middleware' => ['auth']],
 		Route::get('/books/view-all', 'BookController@viewAll')->name('books.viewall');                       //
 		Route::get('/videos/view-all', 'VideoController@viewAll')->name('videos.viewall');                    //
 		Route::get('/categories/view-all', 'CategoryController@viewAll')->name('categories.viewall');         //
+		Route::get('/downloads/view-all', 'DownloadController@viewAll')->name('downloads.viewall');         //
 		                                                                                                      //
 		////////////////////////////////////////////////////////////////////////////////////////////////////////
 

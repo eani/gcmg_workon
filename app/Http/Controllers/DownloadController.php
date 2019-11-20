@@ -21,6 +21,26 @@ class DownloadController extends Controller
         //
     }
 
+    public function viewAll()
+    {
+
+
+        // $downlquery = DB::table('downloads')->Orderby('id', 'desc')->get();
+
+        $downlquery = DB::table('downloads')
+                             ->select(DB::raw('COUNT(file_name) AS no_of_downloads, file_name AS media_name, file_type AS media_type'))
+                             ->groupBy('file_name', 'media_type')
+                             ->Orderby('no_of_downloads', 'desc')
+                             ->get();
+
+        // dd($downlquery->toArray());
+
+        return view('admin.download.list', compact('downlquery'));
+
+
+
+    }
+
 
 
     /**
