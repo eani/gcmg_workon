@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Category;
+use App\Download;
 use DB;
 use Illuminate\Http\Request;
 use Exception;
@@ -39,7 +40,28 @@ class CategoryController extends Controller
         // dd($categories->toArray());
         // dd($category_typesVideo->toArray());
 
-        return view('home', compact('categories','category_typesApp','category_typesAudio','category_typesbooks', 'category_typesVideo','catlimit'));
+        $downloads = Download::get();
+        $downlimit = DB::table('downloads')->Orderby('id', 'desc')->limit(5)->get();
+        $downloads_typesApp = Download::where('file_type','application')->get();
+        $downloads_typesAudio = Download::where('file_type','audio')->get();
+        $downloads_typesbooks = Download::where('file_type','book')->get();
+        $downloads_typesVideo = Download::where('file_type','video')->get();
+
+        $mostdownload = DB::table('downloads')
+                             ->select(DB::raw('COUNT(file_name) AS no_of_downloads, file_name AS media_name, file_type AS media_type'))
+                             ->groupBy('file_name', 'media_type')
+                             ->Orderby('no_of_downloads', 'desc')
+                             ->limit(6)
+                             ->get();
+
+        // dd($downloads->toArray());
+        // dd($mostdownload->toArray());
+        // dd($downloads_typesVideo->toArray());
+
+
+
+        return view('home', compact('downloads','downloads_typesApp','downloads_typesAudio','downloads_typesbooks', 'downloads_typesVideo','downlimit', 'categories','category_typesApp','category_typesAudio','category_typesbooks', 'category_typesVideo','catlimit','mostdownload'));
+
     }
 
     /**

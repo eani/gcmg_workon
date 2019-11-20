@@ -44,7 +44,75 @@
         <div class="container-fluid">
 
             <div class="row">
-                <div class="col-12">
+                <div class="col-lg-6">
+                    <div class="card-box">
+                        <h4 class="header-title mb-4">Media Download Overview</h4>
+
+                        <div class="row">
+                            <div class="col-sm-6 col-lg-6 col-xl-3">
+                                <div class="card-box mb-0 widget-chart-two">
+                                    <div class="float-right">
+                                        <input data-plugin="knob" data-width="80" data-height="80" data-linecap=round
+                                               data-fgColor="#0acf97" value="{{$downloads_typesApp->count()}}" data-skin="tron" data-angleOffset="180"
+                                               data-readOnly=true data-thickness=".1"/>
+                                    </div>
+                                    <div class="widget-chart-two-content">
+                                        <p class="text-muted mb-0 mt-2">Number of Downloads for </p>
+                                        <h3 class="">Applications</h3>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-lg-6 col-xl-3">
+                                <div class="card-box mb-0 widget-chart-two">
+                                    <div class="float-right">
+                                        <input data-plugin="knob" data-width="80" data-height="80" data-linecap=round
+                                               data-fgColor="#f9bc0b" value="{{$downloads_typesAudio->count()}}" data-skin="tron" data-angleOffset="180"
+                                               data-readOnly=true data-thickness=".1"/>
+                                    </div>
+                                    <div class="widget-chart-two-content">
+                                        <p class="text-muted mb-0 mt-2">Number of Downloads for </p>
+                                        <h3 class="">Audios </h3>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="col-sm-6 col-lg-6 col-xl-3">
+                                <div class="card-box mb-0 widget-chart-two">
+                                    <div class="float-right">
+                                        <input data-plugin="knob" data-width="80" data-height="80" data-linecap=round
+                                               data-fgColor="#f1556c" value="{{$downloads_typesbooks->count()}}" data-skin="tron" data-angleOffset="180"
+                                               data-readOnly=true data-thickness=".1"/>
+                                    </div>
+                                    <div class="widget-chart-two-content">
+                                        <p class="text-muted mb-0 mt-2">Number of Downloads for </p>
+                                        <h3 class="">Books </h3>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="col-sm-6 col-lg-6 col-xl-3">
+                                <div class="card-box mb-0 widget-chart-two">
+                                    <div class="float-right">
+                                        <input data-plugin="knob" data-width="80" data-height="80" data-linecap=round
+                                               data-fgColor="#2d7bf4" value="{{$downloads_typesVideo->count()}}" data-skin="tron" data-angleOffset="180"
+                                               data-readOnly=true data-thickness=".1"/>
+                                    </div>
+                                    <div class="widget-chart-two-content">
+                                        <p class="text-muted mb-0 mt-2">Number of Downloads for </p>
+                                        <h3 class="">Videos </h3>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end row -->
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
                     <div class="card-box">
                         <h4 class="header-title mb-4">Resourece Category Overview</h4>
 
@@ -111,11 +179,45 @@
                         <!-- end row -->
                     </div>
                 </div>
+
             </div>
-            <!-- end row -->
+            <!-- End row for Diaplay-->
 
-
+            <!-- Start Table Diaplay-->
             <div class="row">
+
+                <div class="col-lg-5">
+                    <div class="card-box">
+                        <h4 class="header-title mb-3">Most Downloaded Media</h4>
+
+                        <div class="table-responsive">
+                            <table class="table table-hover table-centered m-0">
+
+                                <thead>
+                                <tr>
+                                    <th>Num of Downloads</th>
+                                    <th>Name of Media</th>
+                                    <th>Media Type</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tbody>
+                                @foreach($mostdownload as $download)    
+                                <tr>
+                                    <td>{{$download->no_of_downloads}}</td>
+                                    <td>{{$download->media_name}}</td>
+                                    <td>{{$download->media_type}}</td>
+                                </tr>
+                                @endforeach
+                                </tbody>
+
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                
                 <div class="col-lg">
                     <div class="card-box">
                         <h4 class="header-title mb-3">Recent Categoreis Created</h4>
@@ -154,7 +256,7 @@
                     </div>
                 </div>
 
-                {{-- <div class="col-lg-4">
+{{--                 <div class="col-lg-4">
                     <div class="card-box">
                         <h4 class="m-t-0 header-title">Total Wallet Balance</h4>
 
@@ -170,7 +272,7 @@
             </div>
             <!-- end row -->
 
-            {{-- <div class="row">
+{{--             <div class="row">
                 <div class="col-lg-6">
                     <div class="card-box">
                         <h4 class="header-title">Order Overview</h4>

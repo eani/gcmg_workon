@@ -2,9 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\Category;
 use App\ApplicationsMedia;
+use DB;
 use App\Download;
 use Illuminate\Http\Request;
+use Exception;
 
 class DownloadController extends Controller
 {

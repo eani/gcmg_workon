@@ -141,11 +141,11 @@ WELCOME TO GCMG - DIGITAL MINISTRY
                         <div class="col-md-12">
                             <ul class="connected-icons social-icons light">
                                 
-                               <!--  <li class="connected-icon">
-                                    <a target="email" href="nationaloffice@gcmgh.org">
+                                <li class="connected-icon">
+                                    <a target="email" href="mailto:nationaloffice@gcmgh.org">
                                         <i class="ion-email-unread"></i> 
                                     </a>
-                                </li>  -->
+                                </li> 
 
                                 <li class="connected-icon">
                                     <a target="_blank" href="https://www.gcmghana.org/">

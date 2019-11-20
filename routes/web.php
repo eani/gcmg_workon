@@ -29,6 +29,7 @@ Route::group(['middleware' => ['auth']],
 		// });
 
 		Route::get('/admin', 'CategoryController@viewdash')->name('admin');
+		// Route::get('/admin', 'DownloadController@viewdash')->name('admin');
 
 
 		///////////////////////////////////// VIEW ALL LINK ROUTE //////////////////////////////////////////////
