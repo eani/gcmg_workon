@@ -189,7 +189,6 @@
                 <div class="col-lg-5">
                     <div class="card-box">
                         <h4 class="header-title mb-3">Most Downloaded Media</h4>
-                        <button type="submit" href="/videos" class="btn-lg btn-primary waves-effect waves-light" id="submit-all" onclick="submitform()"><span class="accept"></span>View more Here</button>
                         <div class="table-responsive">
                             <table class="table table-hover table-centered m-0">
 

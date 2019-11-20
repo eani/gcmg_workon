@@ -35,6 +35,12 @@
                         <i class="fi-air-play"></i><span class="badge badge-danger badge-pill pull-right"></span> <span> Dashboard </span>
                     </a>
                 </li>
+
+                <li>
+                    <a href="/downloads/view-all">
+                        <i class="fi-air-play"></i><span class="badge badge-danger badge-pill pull-right"></span> <span> Downloads </span>
+                    </a>
+                </li>
                 
                 <li>
                     <a href="javascript: void(0);"><i class="dripicons-view-apps"></i><span> Category Creation </span> <span class="menu-arrow"></span></a>
