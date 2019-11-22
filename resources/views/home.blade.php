@@ -711,13 +711,13 @@
 
         
         @foreach($amchartdata as $download) 
-        chart.data =   [{
-              "date": "{{$download->date}}",
-              "market1": "{{$download->number}}",
-              "market2": "0",
-              "sales1": "0",
-              "sales2": "0"
-        }] 
+            chart.data =   [{
+                  "date": "{{$download->date}}",
+                  "market1": "{{$download->app_count}}",
+                  "market2": "{{$download->audio_count}}",
+                  "sales1": "{{$download->book_count}}",
+                  "sales2": "{{$download->video_count}}"
+            }] 
         @endforeach
 
         // Create axes

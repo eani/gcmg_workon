@@ -54,12 +54,18 @@ class CategoryController extends Controller
                              ->limit(6)
                              ->get();
 
+        // $amchartdata = DB::table('downloads')
+        //                      ->select(DB::raw('COUNT(file_type) AS number, file_type AS media_type, DATE_FORMAT(created_at,"%Y-%m-%d") AS date'))
+        //                      ->groupBy('created_at', 'file_type')
+        //                      ->Orderby('created_at', 'ASC')
+        //                      ->get();
+
+
         $amchartdata = DB::table('downloads')
-                             ->select(DB::raw('COUNT(file_type) AS number, file_type AS media_type, DATE_FORMAT(created_at,"%Y-%m-%d") AS date'))
-                             ->groupBy('created_at', 'file_type')
+                             ->select(DB::raw('application_type AS app_name, COUNT(application_type) AS app_count, audio_type AS audio_name, COUNT(audio_type) AS audio_count, book_type AS book_name, COUNT(book_type) AS book_count, video_type AS video_name , COUNT(video_type) as video_count, created_at AS date'))
+                             ->groupBy('created_at', 'application_type','audio_type', 'book_type', 'video_type')
                              ->Orderby('created_at', 'ASC')
                              ->get();
-
         // dd($downloads->toArray());
         // dd($mostdownload->toArray());
         // dd($amchartdata->toArray());
