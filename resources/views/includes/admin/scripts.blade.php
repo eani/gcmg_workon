@@ -71,6 +71,11 @@
         <!-- Selection table -->
         <script src="{{asset('admin_assets/plugins/datatables/dataTables.select.min.js')}}"></script>
 
+        <!-- AM Charts Files -->
+        <script src="https://www.amcharts.com/lib/4/core.js"></script>
+        <script src="https://www.amcharts.com/lib/4/charts.js"></script>
+        <script src="https://www.amcharts.com/lib/4/themes/animated.js"></script>
+
         {{-- My Script for uploading normal Form and dropzone media --}}
         <script>
             submitform = function(){

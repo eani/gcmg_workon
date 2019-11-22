@@ -44,3 +44,5 @@
         <link href="{{asset('admin_assets/plugins/datatables/select.bootstrap4.min.css')}}" rel="stylesheet" type="text/css" />
 
         <script src="{{asset('admin_assets/assets/js/modernizr.min.js')}}"></script>
+
+        

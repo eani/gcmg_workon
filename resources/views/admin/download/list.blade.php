@@ -39,6 +39,7 @@
                                                 <th>Name of Media</th>
                                                 <th>Media Type</th>
                                                 <th>Number of Downloads</th>
+                                                <th>Date of Download</th>
                                             </tr>
                                         </thead>
 
@@ -48,6 +49,7 @@
                                             <td>{{$download->media_name}}</td>
                                             <td>{{$download->media_type}}</td>
                                             <td>{{$download->no_of_downloads}}</td>
+                                            <td>{{$download->date}}</td>
                                         </tr>
                                         @endforeach
                                         </tbody>
